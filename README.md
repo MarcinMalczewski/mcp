@@ -45,6 +45,33 @@ The client will:
 2. List all available resources
 3. Call the `current_datetime` tool with "America/New_York" timezone
 
+### Running the LangChain Client Example
+
+This project includes an example of using the MCP server with LangChain, based on the [langchain-mcp-adapters](https://github.com/langchain-ai/langchain-mcp-adapters) repository.
+
+To run the LangChain client example:
+
+1. First, make sure the MCP server is running:
+```bash
+python src/server.py
+```
+
+2. Set your OpenAI API key as an environment variable:
+```bash
+# On Windows
+set OPENAI_API_KEY=your-api-key-here
+
+# On Unix/Linux/MacOS
+export OPENAI_API_KEY=your-api-key-here
+```
+
+3. Run the LangChain client:
+```bash
+python src/langchain_client.py
+```
+
+The LangChain client demonstrates how to integrate the MCP server with LangChain's agent system, allowing for more complex interactions and reasoning about the available tools.
+
 ## Cursor Configuration
 
 To use this server with Cursor IDE, you need to configure it in your Cursor settings. Create or update the `mcp.json` file in your Cursor configuration directory with the following:
